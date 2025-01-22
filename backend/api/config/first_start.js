@@ -2,7 +2,7 @@
 const DB = require('../db.config')
 
 /*** CREATE FIRST ADMIN USER */
-const initFirstUser = async () => {
+exports.initFirstUser = async () => {
     try{
         const test = await DB.User.findAll()
         if(test.length == 0){
@@ -19,5 +19,3 @@ const initFirstUser = async () => {
         console.log(err)
     }
 }
-
-initFirstUser()
