@@ -161,7 +161,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: backend
+        working-directory: frontend
 
     steps:
       - name: Checkout Code
@@ -170,6 +170,6 @@ jobs:
       - name: SonarCloud
         uses: sonarsource/sonarcloud-github-action@v3.1.0
         with:
-          projectBaseDir: backend
+          projectBaseDir: frontend
           env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN_FRONT }}
